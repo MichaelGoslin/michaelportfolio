@@ -331,7 +331,38 @@
     justify-content:center;
     min-height:260px;
   }
-  .diagram svg{ width:100%; max-width:280px; height:auto; }
+  .diagram svg{ width:100%; max-width:280px; height:auto; overflow:visible; }
+
+  .diagram svg .orbit-group{
+    transform-box: view-box;
+    transform-origin: 100px 100px;
+    animation: orbit-spin linear infinite;
+  }
+  .diagram svg .orbit-outer{ animation-duration: 11s; }
+  .diagram svg .orbit-mid-a{ animation-duration: 7s; }
+  .diagram svg .orbit-mid-b{ animation-duration: 9s; animation-direction: reverse; }
+  .diagram svg .orbit-inner{ animation-duration: 4.5s; animation-direction: reverse; }
+
+  .diagram svg .core{
+    transform-box: view-box;
+    transform-origin: 100px 100px;
+    animation: core-pulse 2.2s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px var(--coral));
+  }
+
+  .diagram svg .planet-coral{ filter: drop-shadow(0 0 6px var(--coral)); }
+  .diagram svg .planet-coral-deep{ filter: drop-shadow(0 0 6px var(--coral-deep)); }
+  .diagram svg .planet-gold{ filter: drop-shadow(0 0 7px #ffcc4d); }
+  .diagram svg .planet-teal{ filter: drop-shadow(0 0 7px #4cd3c8); }
+  .diagram svg .planet-violet{ filter: drop-shadow(0 0 7px #b98bff); }
+
+  .diagram svg .star{
+    animation: twinkle 2.6s ease-in-out infinite;
+  }
+
+  @keyframes orbit-spin{ to{ transform:rotate(360deg); } }
+  @keyframes core-pulse{ 0%,100%{ transform:scale(1); } 50%{ transform:scale(1.08); } }
+  @keyframes twinkle{ 0%,100%{ opacity:0.15; } 50%{ opacity:0.65; } }
 
   /* Contact */
   .contact-grid{
@@ -477,6 +508,8 @@
 
   @media (prefers-reduced-motion: reduce){
     .orbit, .orbit .node span{ animation:none; }
+    .diagram svg .orbit-group{ animation-duration: 45s !important; }
+    .diagram svg .core, .diagram svg .star{ animation:none; }
     *{ transition:none !important; }
   }
 </style>
@@ -591,12 +624,32 @@
       </div>
       <div class="diagram">
         <svg viewBox="0 0 200 200" fill="none">
+          <circle class="star" cx="18" cy="22" r="1.4" fill="var(--coral)" opacity="0.4"/>
+          <circle class="star" cx="180" cy="36" r="1.1" fill="var(--coral-deep)" opacity="0.35" style="animation-delay:0.6s"/>
+          <circle class="star" cx="26" cy="172" r="1.2" fill="var(--coral)" opacity="0.3" style="animation-delay:1.2s"/>
+          <circle class="star" cx="184" cy="164" r="1.5" fill="var(--coral-deep)" opacity="0.4" style="animation-delay:1.8s"/>
+          <circle class="star" cx="8" cy="100" r="1" fill="var(--coral)" opacity="0.3" style="animation-delay:0.3s"/>
+          <circle class="star" cx="192" cy="100" r="1.2" fill="#4cd3c8" opacity="0.35" style="animation-delay:0.9s"/>
+
           <circle cx="100" cy="100" r="70" stroke="var(--coral)" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.6"/>
           <circle cx="100" cy="100" r="46" stroke="var(--coral)" stroke-width="1.5" opacity="0.8"/>
-          <circle cx="100" cy="30" r="9" fill="var(--coral)"/>
-          <circle cx="160" cy="130" r="9" fill="var(--coral-deep)"/>
-          <circle cx="40" cy="130" r="9" fill="var(--coral-deep)"/>
-          <circle cx="100" cy="100" r="14" fill="var(--card)" stroke="var(--coral)" stroke-width="3"/>
+          <circle cx="100" cy="100" r="24" stroke="#b98bff" stroke-width="1.2" stroke-dasharray="3 5" opacity="0.5"/>
+
+          <g class="orbit-group orbit-outer">
+            <circle class="planet-coral" cx="100" cy="30" r="9" fill="var(--coral)"/>
+            <circle class="planet-gold" cx="100" cy="170" r="7" fill="#ffcc4d"/>
+          </g>
+          <g class="orbit-group orbit-mid-a">
+            <circle class="planet-coral-deep" cx="146" cy="100" r="7" fill="var(--coral-deep)"/>
+          </g>
+          <g class="orbit-group orbit-mid-b">
+            <circle class="planet-teal" cx="54" cy="100" r="6" fill="#4cd3c8"/>
+          </g>
+          <g class="orbit-group orbit-inner">
+            <circle class="planet-violet" cx="124" cy="100" r="5" fill="#b98bff"/>
+          </g>
+
+          <circle class="core" cx="100" cy="100" r="14" fill="var(--card)" stroke="var(--coral)" stroke-width="3"/>
         </svg>
       </div>
     </div>
