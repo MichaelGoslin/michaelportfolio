@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Michael Goslin — Built to Lead. Driven to Create.</title>
+<title>Michael Goslin — Built to Lead. Driven to Secure.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -104,7 +104,7 @@
     text-transform:uppercase;
     color:var(--coral-deep);
     font-weight:700;
-    margin-bottom:22px;
+    margin-bottom:52px;
   }
 
 
@@ -479,6 +479,23 @@
   }
   .form-note.success{ color:var(--coral-deep); font-weight:600; }
 
+  .resume-btn{
+    display:inline-block;
+    margin-top:28px;
+    padding:14px 30px;
+    font-family:'Inter', sans-serif;
+    font-weight:600;
+    font-size:0.95rem;
+    color:#fff;
+    background:linear-gradient(145deg, var(--coral), var(--coral-deep));
+    border-radius:12px;
+    text-decoration:none;
+    box-shadow:var(--shadow);
+    transition:transform var(--transition), box-shadow var(--transition);
+  }
+  .resume-btn:hover{ transform:translateY(-2px); }
+  .resume-btn svg{ width:16px; height:16px; vertical-align:-3px; margin-right:8px; }
+
   @media (max-width:860px){
     .contact-grid{ grid-template-columns:1fr; }
     .form-row{ grid-template-columns:1fr; }
@@ -525,6 +542,7 @@
       <a href="#mission" class="hide-mobile">Mission</a>
       <a href="#projects" class="hide-mobile">Projects</a>
       <a href="#contact" class="hide-mobile">Contact</a>
+      <a href="Michael_Goslin_Resume.pdf" download class="hide-mobile">Resume</a>
     </nav>
   </div>
 </header>
@@ -536,8 +554,8 @@
 
       <div class="orbit-wrap">
         <div class="orbit">
-          <div class="node n1"><span>BI</span></div>
-          <div class="node n2"><span>SWE</span></div>
+          <div class="node n1"><span>SEC</span></div>
+          <div class="node n2"><span>CLOUD</span></div>
           <div class="node n3"><span>AI</span></div>
         </div>
         <div class="avatar-ring">
@@ -545,8 +563,11 @@
         </div>
       </div>
 
-      <h1 class="headline">Built to Lead.<br><span class="accent">Driven to Create.</span></h1>
-      <p class="sub">Michael is building his craft at the intersection of data and design — currently learning Business Intelligence, exploring software development, and preparing to dive into generative AI.</p>
+      <h1 class="headline">Built to Lead.<br><span class="accent">Driven to Secure.</span></h1>
+      <p class="sub">Senior IT professional with 25+ years architecting secure enterprise environments and leading high-performing IT operations — driving infrastructure modernization, automating complex workflows, and bridging technical teams with executive stakeholders.</p>
+      <a class="resume-btn" href="Michael_Goslin_Resume.pdf" download>
+        <svg viewBox="0 0 24 24" fill="none" style="display:inline;"><path d="M12 3v13m0 0l-5-5m5 5l5-5M4 21h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Download Resume
+      </a>
     </div>
   </section>
 
@@ -559,23 +580,23 @@
       <div class="skills-grid">
         <div class="skill-card">
           <svg class="skill-icon" viewBox="0 0 48 48" fill="none"><path d="M24 4L6 40h36L24 4z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M24 20v10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
-          <h3>Strength</h3>
-          <p>A steady foundation for tackling hard problems and staying the course.</p>
+          <h3>Cloud &amp; Infrastructure</h3>
+          <p>Windows Enterprise, Linux, macOS, virtualization, Intune, and cloud solutions architecture.</p>
         </div>
         <div class="skill-card">
           <svg class="skill-icon" viewBox="0 0 48 48" fill="none"><path d="M24 6l14 8v20l-14 8-14-8V14l14-8z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M24 6v36M10 14l28 20M38 14L10 34" stroke="currentColor" stroke-width="1.5" opacity="0.5"/></svg>
-          <h3>Clarity</h3>
-          <p>Turning complexity into clear, actionable direction for every project.</p>
+          <h3>Cybersecurity &amp; Networking</h3>
+          <p>NAC, IDS/IPS, IAM, endpoint security, DNS, TCP/IP, VPN, and disaster recovery.</p>
         </div>
         <div class="skill-card">
           <svg class="skill-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="3"/><path d="M24 4v8M24 36v8M4 24h8M36 24h8" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
-          <h3>Leadership</h3>
-          <p>Guiding people and ideas with purpose, empathy, and follow-through.</p>
+          <h3>Software &amp; Automation</h3>
+          <p>Python, PowerShell, SQL, .NET, JSON, REST APIs, EDI, OCR, and systems automation.</p>
         </div>
         <div class="skill-card">
           <svg class="skill-icon" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="3"/><circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="2.5" opacity="0.6"/><circle cx="24" cy="24" r="3" fill="currentColor"/></svg>
-          <h3>Experience</h3>
-          <p>Depth earned through real work, real challenges, and real growth.</p>
+          <h3>Emerging Technology</h3>
+          <p>Generative AI, systems architecture, and IT infrastructure modernization strategy.</p>
         </div>
       </div>
     </div>
@@ -584,24 +605,24 @@
   <section id="journey">
     <div class="wrap">
       <div class="section-head">
-        <span class="tag">Learning Journey</span>
-        <h2>Where he is headed</h2>
+        <span class="tag">Career Journey</span>
+        <h2>25+ years in the making</h2>
       </div>
       <div class="journey-row">
         <div class="journey-item">
-          <div class="journey-stage">Currently Learning</div>
-          <h3>Business Intelligence</h3>
-          <p>Turning raw data into insight, dashboards, and decisions.</p>
+          <div class="journey-stage">1996 – 2015</div>
+          <h3>Systems Developer to IS Manager</h3>
+          <p>Modernized legacy systems at Columbia University, boosting operational efficiency by 85% and eliminating high-risk vulnerabilities.</p>
         </div>
         <div class="journey-item">
-          <div class="journey-stage">Exploring</div>
-          <h3>Software Development</h3>
-          <p>Building the technical skills to bring ideas to life in code.</p>
+          <div class="journey-stage">2015 – 2022</div>
+          <h3>Associate Director, Information Systems</h3>
+          <p>Led infrastructure overhauls that cut critical incidents and network latency by 75%, closing 95% of identified vulnerabilities.</p>
         </div>
         <div class="journey-item">
-          <div class="journey-stage">Next Up</div>
-          <h3>Generative AI</h3>
-          <p>Preparing to design with intelligent, adaptive systems.</p>
+          <div class="journey-stage">2022 – Present</div>
+          <h3>Independent IT Consultant</h3>
+          <p>Advising clients on network security, cloud architecture, and integrating generative AI into enterprise workflows.</p>
         </div>
       </div>
     </div>
@@ -610,7 +631,7 @@
   <section id="mission">
     <div class="wrap">
       <div class="mission">
-        <blockquote>Michael is committed to <span class="hi">learning, creating, and leading</span> with purpose — using strength, clarity, and experience to build meaningful work as he grows in BI, software, and generative AI.</blockquote>
+        <blockquote>Michael is committed to <span class="hi">securing, modernizing, and leading</span> enterprise technology with purpose — bridging technical teams and executive stakeholders to deliver scalable, compliant, and resilient solutions.</blockquote>
       </div>
     </div>
   </section>
@@ -618,9 +639,9 @@
   <section id="projects">
     <div class="wrap projects">
       <div>
-        <span class="eyebrow" style="margin-bottom:14px;">Future Projects</span>
-        <h2>Designing what comes next</h2>
-        <p>I'm exploring how adaptive AI can use creative tools and intelligent design systems to shape bold new digital experiences — building solutions that learn, respond, and evolve with purpose and imagination.</p>
+        <span class="eyebrow" style="margin-bottom:14px;">What's Next</span>
+        <h2>Modernizing what comes next</h2>
+        <p>I'm applying advanced coursework in Generative AI and Cloud Solutions Architecture to help organizations integrate emerging technology into secure, resilient infrastructure — building systems that scale, adapt, and stand up to real-world demands.</p>
       </div>
       <div class="diagram">
         <svg viewBox="0 0 200 200" fill="none">
@@ -664,13 +685,13 @@
       <div class="contact-grid">
         <div class="contact-card">
           <h3>Contact Info</h3>
-          <a class="contact-item" href="mailto:Michael.goslin@pursuit.org">
+          <a class="contact-item" href="mailto:michael.goslin@gmail.com">
             <span class="icon-badge">
               <svg viewBox="0 0 24 24" fill="none"><path d="M3 6l9 7 9-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/></svg>
             </span>
             <span>
               <span class="label">Email</span><br>
-              <span class="value">Michael.goslin@pursuit.org</span>
+              <span class="value">michael.goslin@gmail.com</span>
             </span>
           </a>
           <a class="contact-item" href="tel:+13473605842">
@@ -718,7 +739,7 @@
 </main>
 
 <footer>
-  <div class="wrap">Michael Goslin <span>&middot;</span> Learning. Building. Leading.</div>
+  <div class="wrap">Michael Goslin <span>&middot;</span> Securing. Modernizing. Leading.</div>
 </footer>
 
 <script>
